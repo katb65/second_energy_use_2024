@@ -2,7 +2,7 @@
 
 Visualization of EIA energy consumption data by sectors, split into primary fuel sources & electric sector, with dropdowns for year & state, and corresponding CO2 emissions per same sections.
 
-HTML, JS (D3), and CSS work together to create the webpage which works in real-time off the EIA API. API fetch time reworked to vastly improve from first vis. Legend formatted for minimal clutter while displaying all available data for cases where tooltip is inconvenient.
+HTML, JS (D3), and CSS work together to create the webpage which works in real-time off the EIA API. API fetch time reworked to vastly improve from first vis. Async functions disable user input to avoid bad interleavings. Legend formatted for minimal clutter while displaying all available data for cases where tooltip is inconvenient.
 
 <img width="1892" height="907" alt="image" src="https://github.com/user-attachments/assets/ff152f26-77b9-4e5a-8d19-41fc02b8a8c5" />
 
