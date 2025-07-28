@@ -1,0 +1,49 @@
+.titles {
+    font-family: tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.subtitles {
+    font-family: tahoma, sans-serif; 
+    font-size: 16px;
+}
+
+.mini {
+    font-family: 'Times New Roman', serif;
+    font-size: 10px; 
+    color: rgb(70, 100, 80);
+}
+
+#energy-vis-state, #co2-vis-state {
+    display: inline-block; 
+    position: relative; 
+    width: 500px; 
+    height: 680px;
+}
+
+#energy-vis-state-tree, #co2-vis-state-tree {
+    width: 500px; 
+    height: 650px;
+}
+
+#legends {
+    padding: 5px;
+}
+
+#energy-vis-state-legend, #co2-vis-state-legend {
+    display: inline-block; 
+    position: relative; 
+    width: 500px; 
+    height: 700px; 
+    overflow-y: hidden;
+}
+
+#tooltip-energy, #tooltip-co2 {
+    position: absolute; 
+    z-index: 10; 
+    padding: 10px; 
+    visibility: hidden; 
+    background-color: white; 
+    border: solid; 
+    border-width: 1px;
+}

@@ -1,0 +1,82 @@
+<meta charset="utf-8">
+<!-- Basic security -->
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://d3js.org; style-src 'self'"> 
+
+<head>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="second_energy_use.css">
+    <!-- Adjust mobile display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id = "state-select"></div>
+        <label class = "subtitles" for="state-select-drop">State:
+        <select name="state-select-drop" id="state-select-drop" disabled></select></label>
+    </div>
+    <div id = "year-select">
+        <label class = "subtitles" for="year-select-drop">Year:
+        <select name="year-select-drop" id="year-select-drop" disabled></select></label>
+    </div>
+    <div id = "GWh-or-GW">
+        <label for="GWH-or-GW-drop" class = "subtitles" >Units:
+        <select name = "GWh-or-GW-drop" id = "GWh-or-GW-drop" disabled>
+          <option value = "GWh" selected>GWh</option>
+          <option value = "GW">GW</option>
+        </select></label>
+    </div>
+    <br/>
+
+    <div id = "vis">
+        <div id = "energy-vis-state">
+            <text id = "energy-title-text" class = "titles"> </text>
+            <svg id = "energy-vis-state-tree"></svg>
+        </div>
+        <div id = "co2-vis-state">
+            <text id = "co2-title-text" class = "titles"> </text>
+            <svg id = "co2-vis-state-tree"></svg>
+        </div>
+        <div id = "legends">
+            <div id = "energy-vis-state-legend">
+                <text id = "energy-legend-title-text" class = "titles"> </text>
+            </div>
+            <div id = "co2-vis-state-legend">
+                <text id = "co2-legend-title-text" class = "titles"> </text>
+            </div>
+        </div>
+    </div>
+
+    <div id = "tooltip-energy">
+        <text class = "subtitles subset-name"></text> <br/>
+        <text class = "subtitles slice-name"></text> <br/>
+        <br/>
+        <text class = "val"></text> <br/>
+        <text class = "percent"></text> <br/>
+    </div>
+    <div id = "tooltip-co2">
+        <text class = "subtitles subset-name"></text> <br/>
+        <text class = "subtitles slice-name"></text> <br/>
+        <br/>
+        <text class = "val"></text> <br/>
+        <text class = "percent"></text> <br/>
+    </div>
+
+    <div>
+        <p class = "mini"> *(provided CO2 data includes only coal, natural gas, and petroleum sources) </p>
+        <a href = https://d3js.org class = "mini"> D3 </a><br/>
+        <a href = https://www.eia.gov/opendata/browser/co2-emissions class = "mini"> EIA CO2 Data </a><br/>
+        <a href = https://www.eia.gov/energyexplained/us-energy-facts/images/consumption-by-source-and-sector.pdf class = "mini">
+            EIA Electric vs. Primary Energy Consumption
+        </a><br/>
+        <a href = https://www.eia.gov/tools/glossary/index.php class = "mini">
+            EIA Glossary
+        </a>
+        <text class = "mini">
+            (ex. search "Primary Energy Consumption")
+        </text><br/>
+    </div>
+
+    <script src="second_energy_use.js"></script>
+</body>
